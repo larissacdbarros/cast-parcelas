@@ -82,9 +82,8 @@
             this.lblValortest.AutoSize = true;
             this.lblValortest.Location = new System.Drawing.Point(209, 216);
             this.lblValortest.Name = "lblValortest";
-            this.lblValortest.Size = new System.Drawing.Size(35, 13);
+            this.lblValortest.Size = new System.Drawing.Size(0, 13);
             this.lblValortest.TabIndex = 13;
-            this.lblValortest.Text = "label1";
             // 
             // TelaParcelas
             // 

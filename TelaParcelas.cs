@@ -13,31 +13,39 @@ using static Aula40.Form1;
 namespace Aula40
 {
     public partial class TelaParcelas : Form
+
     {
+        public double ValorInserido { get; set; }
         public TelaParcelas()
         {
             InitializeComponent();
+        }
+        public TelaParcelas(string Valor)
+        {
+            InitializeComponent();
+            //lblValortest.Text = Valor;
+            ValorInserido = double.Parse(Valor); 
         }
 
         private void comboBoxParcelas_SelectedIndexChanged(object sender, EventArgs e)
         {
            
-            Form1 telaInicial = new Form1();
-            
-            
-            for (int i = 0; i < comboBoxParcelas.Items.Count; i++)
-            {
-                double valorParcela;
-                if (comboBoxParcelas.SelectedIndex >= 1)
-                {
-                    valorParcela = double.Parse(telaInicial.txtValortotal.Text) / (i + 1);
-                    lblValorParcela.Text = $"R${valorParcela}";
-                }
-                else
-                {
-                    lblValorParcela.Text = "R$" + telaInicial.txtValortotal.Text;
-                }
-            }
+                lblValorParcela.Text = "R$" + ValorInserido/(comboBoxParcelas.SelectedIndex +1);
+
+            //for (int i = 0; i < 12; i++)
+            //{
+
+            //    double valorParcela;
+            //    if (comboBoxParcelas.SelectedIndex >= 1)
+            //    {
+            //       // valorParcela = ValorInserido/(i+1);
+            //        lblValorParcela.Text = $"R${ValorInserido / (i + 1)}";
+            //    }
+            //    else
+            //    {
+            //        /*lblValorParcela.Text = "R$" + ValorInserido;*/
+            //    }
+            //}
         }
 
         private void TelaParcelas_Load(object sender, EventArgs e)

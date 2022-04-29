@@ -35,10 +35,6 @@ namespace Aula40
             comboBox1.DisplayMember = "descrição";
             comboBox1.ValueMember = "descricao";
 
-            
-            //comboBoxParcelas.DisplayMember = IDataAdapter;
-
-
         }
         public class FormaPgto
         {
@@ -69,7 +65,7 @@ namespace Aula40
                     break;
                 case 2:
                     lblescolha.Text = "Cartão";
-                    TelaParcelas telaParcelas = new TelaParcelas();
+                    TelaParcelas telaParcelas = new TelaParcelas(txtValortotal.Text);
                     telaParcelas.ShowDialog();
                     break;
                 case 3:
