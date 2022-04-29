@@ -31,21 +31,7 @@ namespace Aula40
         {
            
                 lblValorParcela.Text = "R$" + ValorInserido/(comboBoxParcelas.SelectedIndex +1);
-
-            //for (int i = 0; i < 12; i++)
-            //{
-
-            //    double valorParcela;
-            //    if (comboBoxParcelas.SelectedIndex >= 1)
-            //    {
-            //       // valorParcela = ValorInserido/(i+1);
-            //        lblValorParcela.Text = $"R${ValorInserido / (i + 1)}";
-            //    }
-            //    else
-            //    {
-            //        /*lblValorParcela.Text = "R$" + ValorInserido;*/
-            //    }
-            //}
+            
         }
 
         private void TelaParcelas_Load(object sender, EventArgs e)
